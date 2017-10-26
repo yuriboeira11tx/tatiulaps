@@ -15,3 +15,4 @@ class Incidente(models.Model):
 	data_prevista = models.DateField()
 	gravidade = models.CharField(max_length=4, choices=gravidades)
 	postado_por = models.ForeignKey('auth.User', editable=False)
+#Comentário Teste
