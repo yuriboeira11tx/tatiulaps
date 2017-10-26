@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Índice de Incidentes</title>
+</head>
+<body>
+	{% for incidente in incidentes %}
+		{{ incidente.tipo }}
+		{{ incidente.data_prevista }}
+		{{ incidente.gravidade }}
+		{{ incidente.postado_por }}
+		<br>
+	{% endfor %}
+</body>
+</html>

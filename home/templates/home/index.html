@@ -1,0 +1,91 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Natural Guardians</title>
+
+  <!-- CSS -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="{% static 'home/css/materialize.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="{% static 'home/css/style.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <script src="{% static 'home/js/init.js' %}"></script>
+  <script src="{% static 'home/js/materialize.js' %}"></script>
+  <script src="{% static 'home/js/jquery.js' %}"></script>
+</head>
+<body class="amber accent-2">
+  <header class="navbar-fixed">
+  <nav class="grey darken-4">
+    <div class="nav-wrapper">
+    <div class="row">
+
+    <div class="col l3 left"><a id="logo-container" href="#" class="brand-logo"><span style="padding: 10px 10px 20px 10px; color: #ffd740"><i class="material-icons">language</i></span></a></div>
+    <div class="col l5 left"></div>
+
+    <div class="col l2 s12">
+      <ul class="right">
+        <li><a href="{% if user.is_authenticated %}{% url 'login:logout' %}{% else %}{% url 'login:login' %}{% endif %}"><i class="material-icons left"><span style="color:#ffd740">{% if user.is_authenticated %}{% else %}https{% endif %}</span></i><span style="padding: 10px 10px 20px 10px;color: #ffd740">{% if user.is_authenticated %}Logout{% else %}Área Privada{% endif %}</span></a></li>
+      </ul></div>
+    </div>
+    </div>
+  </div>
+  </nav>
+  </header>
+  {% block content %}
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+
+        <h1 class="header center amber-text text-accent-2">Natural Guardian</h1>
+        <div class="row center">
+          <h5 class="header col s12 light ">Prevenção e remediação contra desastres naturais</h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="{% static 'home/files/background1.jpg' %}" alt="Unsplashed background img 1" style="display: block; transform: translate3d(-50%,208px,0px)"></div>
+  </div>
+</div>
+
+<div class="row">
+    
+    <div class="col l12 ">
+      <ul class="collapsible" data-collapsible="accordion">
+		  <li>
+		    <div class="collapsible-header grey darken-4 yellow-text">
+		    	<i class="material-icons">person</i>Proposta
+		  	</div>
+		    <div class="collapsible-body white" style="display:block">
+		    	<p>Auxiliar os órgãos governamentais a terem uma maior velocidade de comunicação e tempo de resposta para organizar recursos e ajudar a população, além de informar a população e tirar dúvidas.</p>
+		    </div>
+		  </li>
+		</ul>
+    </div>
+  </div>
+
+{% endblock content %}
+<footer class="page-footer grey darken-4">
+  <div class="container">
+   <div class="row">
+    <div class="col l8 s12">
+      <h5 class="amber-text text-accent-2">Quem somos</h5>
+      <p class="grey-text text-lighten-4">A equipe Caçadores de Tiltaps desenvolveu esse website com o intuito de desenvolver um importante papel auxiliando os orgãos responsáveis pela segurança pública.</p>
+    </div>
+
+
+<div class="col l4 s12 right">
+        <h5 class="amber-text text-accent-2">Equipe Caçadores de Tiltaps</h5>
+         <pre><a href="https://www.facebook.com/profile.php?id=100006697067361">Diego Cardoso - Dican</a>
+<a href="https://www.facebook.com/eduardo.ribeiro.969300">Eduardo Chedid- Geleia</a>
+<a href="https://www.facebook.com/isadbc42">Isadora Bueno- Tranquileba</a>
+<a href="https://www.facebook.com/eduardo.borges.58726">Eduardo Borges - Shibiribiu</a>
+<a href="https://www.facebook.com/yuriboeira11tx">Yuri Juliano - Derxs</a></pre>
+    </div>
+   </div>
+  </div>
+  <div class="footer-copyright black">
+   <div class="container center">CHARCODE 2017 - Hackaton - Caçadores de Tíltaps :copyright:</div>
+  </div>
+ </footer>
+ </body>
+</html>

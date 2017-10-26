@@ -1,0 +1,9 @@
+{% extends "home/index.html" %}
+{% block content %}
+<center>
+<ul>
+	<li><a type='button' class='btn btn-success' style="color:#fff;background-color:#000;font-size:30px;" href="{% url 'especialistas:indice' %}">Ver incidentes enviados</a></li><br>
+	<li><a type='button' class='btn btn-primary' style="color:#fff;background-color:#000;font-size:30px;" href="{% url 'especialistas:cadastro' %}">Cadastrar Novo Incidente</a></li>
+</ul>
+</center>
+{% endblock content %}

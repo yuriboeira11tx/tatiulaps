@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Índice de Abrigos</title>
+	<style type="text/css">
+	body {
+		font-family: Arial;
+		font-size: 20px;
+	}
+	</style>
+</head>
+<body>
+	{% for abrigo in abrigos %}
+		{{ abrigo.nome }}
+		{{ abrigo.cidade }} - {{ abrigo.estado }}
+		{{ abrigo.rua }}, {{ abrigo.numero }}, {{ abrigo.capacidade }}
+	{% endfor %}
+</body>
+</html>

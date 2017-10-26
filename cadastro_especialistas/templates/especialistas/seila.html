@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+{% load static %}
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Natural Guardians</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="{% static 'home/css/materialize.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="{% static 'home/css/style.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+
+<body class="amber accent-2">
+  <header class= "navbar-fixed">
+  <nav class="grey darken-4">
+    <div class="nav-wrapper">
+    <div class="row">
+
+    <div class="col l3 left"><a id="logo-container" href="#" class="brand-logo"><span style="padding: 10px 10px 20px 10px; color: #ffd740;">IDesastre</span></a></div>
+    <div class="col l5 left"></div>
+
+    <div class="col l2">
+        <form>
+          <div class="input-field">
+            <input id="search" type="search" />
+            <label for="search"><i class="material-icons">search</i></label>
+          </div>
+        </form>
+      </div>
+    <div class="col l2">
+      <ul class="right">
+        <li><a href="#"><i class="material-icons left"><span style="color:#ffd740">https</span></i><span style="padding: 10px 10px 20px 10px;color: #ffd740">Área Privada</span></a></li>
+      </ul></div>
+
+    </div>
+   
+
+    </div>
+  </div>
+  </nav>
+  </header>
+    <div class="container amber accent-2">
+      <div class="card-panel hoverable">
+        <h4>Histórico</h4>
+          <table class = "striped bordered">
+             <thead>
+                <tr>
+                   <th>Tipo</th>
+                   <th>Gravidade</th>
+                   <th>Cidade</th>
+                   <th>Data</th>
+                </tr>
+             </thead>
+             
+             <tbody>
+              {% for incidente in incidentes %}
+                <tr>
+                   <td>{{incidente.tipo}}</td>
+                   <td>{{incidente.gravidade}}</td>
+                   <td>{{incidente.cidade}}</td>
+                   <td>{{incidente.data_prevista}}</td>
+                </tr>
+              {% endfor %}
+             </tbody>
+          </table>
+      </div>
+    </div>
+ 
+  <footer class="page-footer grey darken-4">
+  <div class="container">
+   <div class="row">
+    <div class="col l8 s12">
+      <h5 class="amber-text text-accent-2">Quem somos</h5>
+      <p class="grey-text text-lighten-4">A equipe Caçadores de Tiltaps desenvolveu esse website com o intuito de ajudar os agentes governamentais à tatata tututu, pois titititi vavava blublsblubs.</p>
+    </div>
+
+
+<div class="col l4 s12 right">
+        <h5 class="amber-text text-accent-2">Equipe Caçadores de Tiltaps</h5>
+         <pre><a href="https://www.facebook.com/profile.php?id=100006697067361">Diego Cardoso - Dican</a>
+<a href="https://www.facebook.com/eduardo.ribeiro.969300">Eduardo Chedid- Geleia</a>
+<a href="https://www.facebook.com/isadbc42">Isadora Bueno- Tranquileba</a>
+<a href="https://www.facebook.com/eduardo.borges.58726">Eduardo Borges - Shibiribiu</a>
+<a href="https://www.facebook.com/yuriboeira11tx">Yuri Juliano - Derxs</a></pre>
+    </div>
+   </div>
+  </div>
+  <div class="footer-copyright black">
+   <div class="container center">CHARCODE 2017 - Hackaton - Caçadores de Tíltaps ©</div>
+  </div>
+ </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>
