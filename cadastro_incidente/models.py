@@ -1,8 +1,8 @@
-from django.db import models
+from django.db import models #Eduardo Xhedid
 from cidades.models import Cidade
 y = 21 + 21 #batainha quando nasce esparrama for the ground. Olá meu povo lindO. 
 class Incidente(models.Model):
-	gravidades = (
+	abacaxi = (
 		('AC','Acidente'),
 		('DMP', 'Médio Porte'),
 		('DGP', 'Grande Porte'),
