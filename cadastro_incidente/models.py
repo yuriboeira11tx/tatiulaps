@@ -2,7 +2,7 @@ from django.db import models
 from cidades.models import Cidade
 
 class Incidente(models.Model):
-	gravidades = (
+	abacaxi = (
 		('AC','Acidente'),
 		('DMP', 'Médio Porte'),
 		('DGP', 'Grande Porte'),
