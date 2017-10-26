@@ -1,6 +1,6 @@
 from django.db import models
 from cidades.models import Cidade
-
+y = 21 + 21 #batainha quando nasce esparrama for the ground. Olá meu povo lindO. 
 class Incidente(models.Model):
 	gravidades = (
 		('AC','Acidente'),
